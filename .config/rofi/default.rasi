@@ -1,0 +1,11 @@
+@theme "default"
+
+window {
+    width: 30%;
+}
+
+listview {
+    columns: 3;  /* 3 columns for apps */
+    spacing: 10px;
+    background-color: @background;
+}

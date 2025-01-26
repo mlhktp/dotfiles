@@ -1,5 +1,5 @@
 [global]
-    font = "Fira Code Nerd Font Regular 10, Maple Mono Italic 10"
+    font = "Fira Code Nerd Font Regular 12"
     allow_markup = yes
     markup = yes
     sort = yes
@@ -13,10 +13,10 @@
     monitor = 0
     follow = mouse
     sticky_history = yes
-    line_height = 5
+    line_height = 10
     separator_height = 2
     padding = 24
-    horizontal_padding = 12
+    horizontal_padding = 24
     separator_color = "#3c4549"
     separator_width = 1
     startup_notification = false
@@ -24,7 +24,7 @@
     icon_corner_radius = 10
     frame_color = "#3c4549"
     frame_width = 0
-    width = (300, 600)  # Min 300px, max 600px
+    width = (350, 600)  # Min 300px, max 600px
     progress_bar_max_width = 250
     progress_bar_min_width = 250
     progress_bar_height = 10
@@ -40,14 +40,14 @@
 [global]
   class = "Dunst"
 [urgency_low]
-    background = "#050B1570"
-    foreground = "#9fbfdc"
+    background = "#2e0b3370"
+    foreground = "#c6dfec"
     timeout = 3
 [urgency_normal]
-    background = "#050B1570"
-    foreground = "#9fbfdc"
+    background = "#2e0b3370"
+    foreground = "#c6dfec"
     timeout = 3
 [urgency_critical]
-    background = "#050B1570"
-    foreground = "#9fbfdc"
+    background = "#2e0b3370"
+    foreground = "#c6dfec"
     timeout = 3

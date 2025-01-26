@@ -25,10 +25,13 @@ exec_always --no-startup-id bash ~/.config/polybar/start.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id xset s off && xset dpms 0 0 0
 
+# Find class name with xprop
+# xprop | grep WM_CLASS | awk '{ print $4 }'
 for_window [class="Tk"] floating enable
 for_window [class="Nitrogen"] floating enable
 for_window [class="Nitrogen"] move absolute position center
 for_window [class="MATLAB R2024b - academic use"] floating enable
+for_window [class="Gifview"] floating enable
 
 
 
@@ -67,6 +70,7 @@ bindsym $mod+q kill
 
 bindsym $mod+c exec --no-startup-id bash ~/scripts/rofi_tools_menu.sh
 bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $alt+Tab exec --no-startup-id rofi -show window
 bindsym $mod+t exec bash ~/scripts/themechanger.sh
 bindsym $mod+Shift+q exec bash ~/scripts/rofi_power_menu.sh
 

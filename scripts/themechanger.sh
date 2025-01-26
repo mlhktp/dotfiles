@@ -10,7 +10,7 @@ THEME_DIR=$(for dir in "$PARENT_DIR"/*; do
     if [ -n "$first_image" ]; then
         echo -en "$dir_name\0icon\x1f$first_image\n"
     fi
-done | rofi -dmenu -p "Select Theme Directory")
+done | rofi -dmenu -p "Select Theme Directory" -theme ~/.config/rofi/themechanger.rasi)
 
 # Validate the selected directory
 if [ -z "$THEME_DIR" ]; then
@@ -32,7 +32,7 @@ WALL_NAME=$(for img in "$THEME_PATH"/*.{png,jpg,jpeg}; do
     img_name=$(basename "$img")
     img_name_no_ext=${img_name%.*}
     echo -en "${img_name_no_ext^^}\0icon\x1f$img\n"
-done | rofi -dmenu -p "Select Wallpaper")
+done | rofi -dmenu -p "Select Wallpaper" -theme ~/.config/rofi/themechanger.rasi)
 
 # Validate the selected image
 if [ -z "$WALL_NAME" ]; then
