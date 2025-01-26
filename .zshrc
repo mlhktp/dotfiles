@@ -61,7 +61,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH=$PATH:/usr/local/go/bin:/home/melih/go/bin/
+export PATH=$PATH:/usr/local/go/bin:~/go/bin/
+export PATH=$PATH:~/rofi-bluetooth/
+
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
