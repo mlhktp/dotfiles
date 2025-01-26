@@ -1,8 +1,7 @@
 [global]
-    font = "Font Awesome 5 Free Regular 9, Maple Mono Italic 9"
+    font = "Fira Code Nerd Font Regular 10, Maple Mono Italic 10"
     allow_markup = yes
     markup = yes
-    format = "<span foreground='#5bb1b4'><b>%s</b></span>\n\n%b"
     sort = yes
     indicate_hidden = yes
     bounce_freq = 0
@@ -10,14 +9,13 @@
     word_wrap = no
     ignore_newline = false
     origin = top-right
-    transparency = 0
     idle_threshold = 120
     monitor = 0
     follow = mouse
     sticky_history = yes
-    line_height = 0
+    line_height = 5
     separator_height = 2
-    padding = 12
+    padding = 24
     horizontal_padding = 12
     separator_color = "#3c4549"
     separator_width = 1
@@ -25,8 +23,8 @@
     corner_radius = 15
     icon_corner_radius = 10
     frame_color = "#3c4549"
-    frame_width = 1
-    width = 200
+    frame_width = 0
+    width = (300, 600)  # Min 300px, max 600px
     progress_bar_max_width = 250
     progress_bar_min_width = 250
     progress_bar_height = 10
@@ -36,16 +34,20 @@
     #offset = 12x67
     min_icon_size = 64
     max_icon_size = 64
-    alignment = center
+    alignment = left
     vertical_alignment = center
 
-
+[global]
+  class = "Dunst"
 [urgency_low]
-    background = "#050B15"
+    background = "#050B1570"
     foreground = "#9fbfdc"
+    timeout = 3
 [urgency_normal]
-    background = "#050B15"
+    background = "#050B1570"
     foreground = "#9fbfdc"
+    timeout = 3
 [urgency_critical]
-    background = "#050B15"
+    background = "#050B1570"
     foreground = "#9fbfdc"
+    timeout = 3

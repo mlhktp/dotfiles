@@ -15,19 +15,22 @@ if [ ! -f "$DUNSTRC_FILE" ]; then
 fi
 
 # Remove the last 16 lines from the dunstrc file
-head -n -9 "$DUNSTRC_FILE" > temp_file && mv temp_file "$DUNSTRC_FILE"
+head -n -12 "$DUNSTRC_FILE" > temp_file && mv temp_file "$DUNSTRC_FILE"
 
 # Define new lines to add
 cat <<EOL >> "$DUNSTRC_FILE"
 [urgency_low]
-    background = "${background}"
+    background = "${background}70"
     foreground = "${foreground}"
+    timeout = 3
 [urgency_normal]
-    background = "${background}"
+    background = "${background}70"
     foreground = "${foreground}"
+    timeout = 3
 [urgency_critical]
-    background = "${background}"
+    background = "${background}70"
     foreground = "${foreground}"
+    timeout = 3
 EOL
 
-echo "Last 9 lines removed and new configuration added to '$DUNSTRC_FILE'."
+echo "Last 12 lines removed and new configuration added to '$DUNSTRC_FILE'."
