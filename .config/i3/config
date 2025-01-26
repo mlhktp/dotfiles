@@ -43,6 +43,7 @@ bindsym $mod+z exec --no-startup-id bash ~/scripts/zen_mode.sh
 bindsym $mod+Ctrl+Up exec --no-startup-id bash ~/scripts/vol.sh volume_up
 bindsym $mod+Ctrl+Down exec --no-startup-id bash ~/scripts/vol.sh volume_down
 bindsym $mod+Shift+t exec --no-startup-id bash ~/scripts/toggle_floating_terminal.sh
+bindsym $mod+Shift+c exec --no-startup-id bash ~/scripts/toggle_chatgpt.sh
 bindsym $mod+o exec --no-startup-id bash ~/scripts/transparency.sh toggle
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id bash ~/scripts/vol.sh volume_up
@@ -74,7 +75,7 @@ bindsym $alt+Tab exec --no-startup-id rofi -show window
 bindsym $mod+t exec bash ~/scripts/themechanger.sh
 bindsym $mod+Shift+q exec bash ~/scripts/rofi_power_menu.sh
 
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
