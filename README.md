@@ -18,9 +18,28 @@ stow .
 
 ## Todos:
 
-- [ ] Change *dunst* and polybar width
+### Dunst:
+- [x] Change *dunst* and polybar width
+- [x] Make *dunst* transparent
+
+
+### Polybar:
+- [ ] Edit *Polybar* workspace module
+- [ ] Add vivado icon to *Polybar*
+- [x] *Polybar* change the size of the title module.
+- [ ] *Polybar* change workspace active and inactive colors
+- [ ] *Polybar* fix volume percentage
+- [ ] Add weather module to *Polybar*
+
+### Rofi:
 - [ ] *Rofi* theme selection bigger theme images
-- [ ] *tmux* change the size of vertical and horizontal panes
+
+### Other:
+- [x] *tmux* change the size of vertical and horizontal panes
+- [ ] *wal* change to darker backgrounds after specific times of the day.
+- [ ] Add a script for *crontab* jobs.
+- [ ] Fix the bluetooth script.
+
 
 ## Long-Term Goals:
 
@@ -30,8 +49,10 @@ stow .
 - [ ] Switch dotfiles theme using branches
 - [ ] Add a script to automatically capture screenshots to showcase the dotfiles
 - [ ] Add spotify integration to polybar
+- [ ] Add copilot as a pop-up screen like rofi
+- [ ] *Polybar* workspace module popup to show all workspaces when hovered
+- [ ] Add A-Tab to show all open windows
 
-
-### Credits:
+## Credits:
 
 - This repo is adopted from Nighty3098's dotfiles repo. You may find the link to his repo [here](https://github.com/Nighty3098/DevDotfiles/)
