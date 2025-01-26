@@ -36,7 +36,7 @@ stow .
 
 ### Other:
 - [x] *tmux* change the size of vertical and horizontal panes
-- [ ] disable *tmux* by default
+- [x] disable *tmux* by default
 - [ ] *wal* change to darker backgrounds after specific times of the day.
 - [ ] Add a script for *crontab* jobs.
 - [ ] Fix the bluetooth script.

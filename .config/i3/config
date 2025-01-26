@@ -1,5 +1,5 @@
 # @mlhktp
-# Credit: This repo is a fork of Nighty3098's dotfiles.
+# Credit: This repo is adapted from @Nighty3098's dotfiles.
 # ___ _______        ____  __    ____ ___  _   _ _____ ___ ____
 #|_ _|___ /\ \      / /  \/  |  / ___/ _ \| \ | |  ___|_ _/ ___|
 # | |  |_ \ \ \ /\ / /| |\/| | | |  | | | |  \| | |_   | | |  _
@@ -56,14 +56,14 @@ bindsym XF86MonBrightnessUp exec ~/scripts/vol.sh brightness_up && $refresh_i3st
 
 floating_modifier $mod
 
-bindsym F12 exec scrot  ~/Screenshots/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
+# bindsym F12 exec scrot  ~/Screenshots/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
 bindsym Shift+F12 exec scrot -u ~/Screenshots/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
 bindsym $mod+p exec flameshot gui
 
 bindsym $mod+Shift+b exec --no-startup-id rofi-bluetooth
 
 bindsym $mod+Return exec /home/melih/.local/kitty.app/bin/kitty
-bindsym $mod+Shift+Return exec /usr/local/bin/alacritty
+bindsym $mod+Shift+Return exec /home/melih/.local/kitty.app/bin/kitty -e tmux
 bindsym $mod+$alt+l exec betterlockscreen -l
 
 bindsym $mod+q kill
@@ -98,8 +98,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+$alt+h split h
-bindsym $mod+$alt+v split v
+bindsym $mod+minus split v
+bindsym $mod+Shift+backslash split h
 
 bindsym $mod+Shift+f fullscreen toggle
 
