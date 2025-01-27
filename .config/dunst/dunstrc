@@ -40,14 +40,14 @@
 [global]
   class = "Dunst"
 [urgency_low]
-    background = "#2e0b3370"
-    foreground = "#c6dfec"
+    background = "#1f130e70"
+    foreground = "#e3cac4"
     timeout = 3
 [urgency_normal]
-    background = "#2e0b3370"
-    foreground = "#c6dfec"
+    background = "#1f130e70"
+    foreground = "#e3cac4"
     timeout = 3
 [urgency_critical]
-    background = "#2e0b3370"
-    foreground = "#c6dfec"
+    background = "#1f130e70"
+    foreground = "#e3cac4"
     timeout = 3

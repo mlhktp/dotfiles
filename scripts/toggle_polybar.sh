@@ -9,6 +9,6 @@ POLYBAR_PROCESS="polybar"
 if pgrep -x "$POLYBAR_PROCESS" > /dev/null; then
     killall -q "$POLYBAR_PROCESS"
 else
-    exec polybar root > /dev/null 2>&1 &
+    exec bash /home/melih/.config/polybar/start.sh > /dev/null 2>&1 &
 fi
 
