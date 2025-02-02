@@ -55,6 +55,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessDown exec ~/scripts/vol.sh brightness_down && $refresh_i3status
 bindsym XF86MonBrightnessUp exec ~/scripts/vol.sh brightness_up && $refresh_i3status
 
+# Media Controls
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 floating_modifier $mod
 
 # bindsym F12 exec scrot  ~/Screenshots/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
