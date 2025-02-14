@@ -1,10 +1,21 @@
 #!/bin/bash
 
-TERMINAL_CLASS="FloatingTerminal"
-TERMINAL_CMD="/home/melih/.local/kitty.app/bin/kitty --class $TERMINAL_CLASS"
-FLAG_FILE="/tmp/floating_terminal_flag"
+TERMINAL_CLASS="SmallFloatingTerminal"
+
 WIDTH=800
 HEIGHT=500
+# if the big input is given
+#
+if [ "$1" == "big" ]; then
+   TERMINAL_CLASS="BigFloatingTerminal"
+   WIDTH=1200
+   HEIGHT=800
+fi
+
+
+
+TERMINAL_CMD="/home/melih/.local/kitty.app/bin/kitty --class $TERMINAL_CLASS"
+FLAG_FILE="/tmp/${TERMINAL_CLASS}Flag"
 
 # Get screen information using xrandr
 SCREEN_INFO=$(xrandr --query | grep " connected")
