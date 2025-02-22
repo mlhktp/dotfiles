@@ -52,15 +52,16 @@ fi
 wal -s -i "${WALL_PATH}"
 
 # Update the symbolic link to the current wallpaper
-rm ~/.current_wallpaper
+[ -f ~/.current_wallpaper ] && rm ~/.current_wallpaper
 ln -sf "${WALL_PATH}" $HOME/.current_wallpaper
 
+betterlockscreen -u "${WALL_PATH}"
 # Notify the user
 notify-send "Wallpaper" "Wallpaper set to ${WALL_PATH}"
 
 # Reload other applications
-bash ~/scripts/wal_to_alacritty.sh ~/.config/alacritty/alacritty.toml
+# bash ~/scripts/wal_to_alacritty.sh ~/.config/alacritty/alacritty.toml
 bash ~/scripts/reload_dunst.sh
-bash ~/scripts/reload_conky.sh
+# bash ~/scripts/reload_conky.sh
 # bash ~/scripts/reload_obsidian.sh "$HOME/Notes"
 

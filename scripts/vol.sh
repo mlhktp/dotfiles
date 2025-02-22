@@ -11,8 +11,7 @@ show_music_in_volume_indicator=true
 
 # Uses regex to get volume from pactl
 function get_volume {
-    pactl list sinks | grep '^[[:space:]]Volume:' | \
-    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'
+pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+(?=%)' | head -n1
 }
 
 # Uses regex to get mute status from pactl
