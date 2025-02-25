@@ -39,6 +39,8 @@ set $refresh_i3status killall -SIGUSR1 i3status
 
 bindsym $mod+BackSpace exec --no-startup-id bash ~/scripts/toggle_polybar.sh
 
+bindsym $mod+F1 exec --no-startup-id ~/scripts/help.sh
+
 bindsym $mod+z exec --no-startup-id bash ~/scripts/zen_mode.sh
 bindsym $mod+Ctrl+Up exec --no-startup-id bash ~/scripts/vol.sh volume_up
 bindsym $mod+Ctrl+Down exec --no-startup-id bash ~/scripts/vol.sh volume_down
@@ -73,6 +75,7 @@ bindsym $mod+Shift+Return exec ~/.local/kitty.app/bin/kitty -e tmux
 bindsym $mod+$alt+l exec betterlockscreen -l
 
 bindsym $mod+q kill
+bindsym $alt+F4 kill
 
 bindsym $mod+c exec --no-startup-id bash ~/scripts/rofi_tools_menu.sh
 bindsym $mod+d exec --no-startup-id rofi -show drun
