@@ -20,7 +20,7 @@ case "$option" in
         rofi -show ssh
         ;;
     "  Bluetooth menu")
-        rofi-bluetooth
+        $HOME/rofi-bluetooth/rofi-bluetooth
         ;;
     "  Volume mixer")
         bash ~/scripts/set_vol_output.sh

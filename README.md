@@ -44,8 +44,8 @@ stow .
 
 ## Long-Term Goals:
 
-- [ ] Add a script to install all the dependencies
-- [ ] Add a script to backup all the current dotfiles on the system and install this repo's dotfiles
+- [ ] Add a script to install all the dependencies - partially done for *Arch Linux*
+- [ ] Add a script to backup all the current dotfiles on the system and install this repo's dotfiles - partially done for *Arch Linux*
 - [ ] Update scripts to check available changes in the repo and update the dotfiles accordingly
 - [ ] Switch dotfiles theme using branches
 - [ ] Add a script to automatically capture screenshots to showcase the dotfiles
@@ -53,6 +53,8 @@ stow .
 - [ ] Add copilot as a pop-up screen like rofi
 - [ ] *Polybar* workspace module popup to show all workspaces when hovered
 - [ ] Add A-Tab to show all open windows
+- [ ] Add apps button
+- [ ] Add help button
 
 ## Credits:
 

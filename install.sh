@@ -25,7 +25,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Installing applications used in scripts"
 # vol.sh
 sudo pacman -S playerctl libnotify
-
+sudo pacman -S flameshot
 mkdir -p /tmp/light-install && cd /tmp/light-install
 git clone https://aur.archlinux.org/light.git
 cd light
