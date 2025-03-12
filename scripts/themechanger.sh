@@ -56,12 +56,23 @@ wal -s -i "${WALL_PATH}"
 ln -sf "${WALL_PATH}" $HOME/.current_wallpaper
 
 betterlockscreen -u "${WALL_PATH}"
-# Notify the user
-notify-send "Wallpaper" "Wallpaper set to ${WALL_PATH}"
 
 # Reload other applications
 # bash ~/scripts/wal_to_alacritty.sh ~/.config/alacritty/alacritty.toml
 bash ~/scripts/reload_dunst.sh
 # bash ~/scripts/reload_conky.sh
 # bash ~/scripts/reload_obsidian.sh "$HOME/Notes"
+
+POLYBAR_PROCESS="polybar"
+if pgrep -x "$POLYBAR_PROCESS" > /dev/null; then
+    killall -q "$POLYBAR_PROCESS"
+    sleep 0.4
+fi
+
+i3-msg gaps bottom all set 9
+
+exec bash /home/melih/.config/polybar/start.sh > /dev/null 2>&1 &
+
+# Notify the user
+notify-send "Wallpaper" "Wallpaper set to ${WALL_NAME}"
 

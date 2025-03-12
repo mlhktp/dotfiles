@@ -1,40 +1,36 @@
 #! /bin/bash
 
-bar="▁▂▃▄▅▆▇█"
+bar=" ▁▂▃▄▅▆▇█"
 dict="s/;//g;"
 
-# creating "dictionary" to replace char with bar
+# Build the sed substitution dictionary.
 i=0
-while [ $i -lt ${#bar} ]
-do
+while [ $i -lt ${#bar} ]; do
     dict="${dict}s/$i/${bar:$i:1}/g;"
-    i=$((i=i+1))
+    i=$((i+1))
 done
 
-# make sure to clean pipe
+# Ensure the pipe is fresh.
 pipe="/tmp/cava.fifo"
-if [ -p $pipe ]; then
-    unlink $pipe
-fi
-mkfifo $pipe
+[ -p "$pipe" ] && unlink "$pipe"
+mkfifo "$pipe"
 
-# write cava config
+# Write cava config.
 config_file="/tmp/polybar_cava_config"
-echo "
+cat <<EOF > "$config_file"
 [general]
-bars = 10
+bars = 60
 
 [output]
 method = raw
 raw_target = $pipe
 data_format = ascii
-ascii_max_range = 7
-" > $config_file
+ascii_max_range = 8
+EOF
 
-# run cava in the background
-cava -p $config_file &
+# Start cava in the background.
+cava -p "$config_file" &
 
-# reading data from fifo
-while read -r cmd; do
-    echo $cmd | sed $dict
-done < $pipe
+# Read and process data from the FIFO using a single sed instance.
+sed -u "$dict" < "$pipe"
+
