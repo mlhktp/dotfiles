@@ -36,18 +36,3 @@
     max_icon_size = 64
     alignment = left
     vertical_alignment = center
-
-[global]
-  class = "Dunst"
-[urgency_low]
-    background = "#02023270"
-    foreground = "#c5ebf5"
-    timeout = 3
-[urgency_normal]
-    background = "#02023270"
-    foreground = "#c5ebf5"
-    timeout = 3
-[urgency_critical]
-    background = "#02023270"
-    foreground = "#c5ebf5"
-    timeout = 3

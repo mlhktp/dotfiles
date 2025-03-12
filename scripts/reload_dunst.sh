@@ -7,11 +7,28 @@
 
 killall -q dunst
 
-DUNSTRC_FILE="$HOME/.config/dunst/dunstrc"
+DUNSTRC_FILE="$HOME/.config/dunst/dunstrc.d/01-colors.conf"
 
 if [ ! -f "$DUNSTRC_FILE" ]; then
     echo "File '$DUNSTRC_FILE' not found!"
-    exit 1
+    mkdir -p "$(dirname "$DUNSTRC_FILE")"
+    touch "$DUNSTRC_FILE"
+cat <<EOL >> "$DUNSTRC_FILE"
+[global]
+  class = "Dunst"
+[urgency_low]
+    background = "${background}70"
+    foreground = "${foreground}"
+    timeout = 3
+[urgency_normal]
+    background = "${background}70"
+    foreground = "${foreground}"
+    timeout = 3
+[urgency_critical]
+    background = "${background}70"
+    foreground = "${foreground}"
+    timeout = 3
+EOL
 fi
 
 # Remove the last 16 lines from the dunstrc file
