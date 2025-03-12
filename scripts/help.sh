@@ -1,10 +1,13 @@
 #!/bin/bash
 
 TERMINAL_CLASS="HelpFloatingTerminal"
-WIDTH=800
-HEIGHT=700
-
 TERMINAL_CMD="/home/melih/.local/kitty.app/bin/kitty --class $TERMINAL_CLASS"
+
+# Check if an instance is already running
+if pgrep -f "$TERMINAL_CMD" > /dev/null; then
+    echo "Terminal is already running. Exiting."
+    exit 0
+fi
 
 # ANSI Color Codes
 YELLOW='\033[1;33m'
@@ -36,7 +39,7 @@ ${CYAN}     Mod+Shift+1-9                ${WHITE} Move window to workspace 1-9
 ${CYAN}     Mod+Shift+e                  ${WHITE} Exit i3
 
 ${GRAY}     ───────────────────────────────────────────────────────────────${RESET}
-${MAGENTA}     (Press 'q' or 'Esc' to close)${RESET}
+${MAGENTA}     (Press a key to close)${RESET}
 "
 
 # Launch kitty and display help text with hidden cursor
@@ -46,10 +49,3 @@ $TERMINAL_CMD --override font_size=12 -e bash -c "
   read -n 1;
   tput cnorm  # Restore cursor
 " &
-
-# Wait for kitty to fully open before applying i3 rules
-sleep 0.5
-
-# Move and resize the help window
-i3-msg "[class=$TERMINAL_CLASS] floating enable, resize set $WIDTH $HEIGHT, move position center"
-

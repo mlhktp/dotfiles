@@ -36,7 +36,7 @@ for_window [class="Gifview"] floating enable
 for_window [class="SmallFloatingTerminal"] floating enable, resize set 800 500, move position center
 for_window [class="BigFloatingTerminal"] floating enable, resize set 1200 800, move position center
 for_window [class="qutebrowser"] floating enable, resize set 800 500, move position center
-
+for_window [class="HelpFloatingTerminal"] floating enable, resize set 800 700, move position center
 
 
 
