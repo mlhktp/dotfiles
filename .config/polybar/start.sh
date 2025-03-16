@@ -9,7 +9,8 @@ pkill polybar
 # i3-msg increase below gaps
 i3-msg gaps bottom all plus 16%
 polybar root --config=/home/melih/.config/polybar/config.ini &
-polybar left --config=/home/melih/.config/polybar/config.ini &
+polybar music --config=/home/melih/.config/polybar/config.ini &
+polybar toolbar --config=/home/melih/.config/polybar/config.ini &
 
 # polybar title &
 # polybar date &

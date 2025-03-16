@@ -39,7 +39,6 @@ ${CYAN}     Mod+Shift+1-9                ${WHITE} Move window to workspace 1-9
 ${CYAN}     Mod+Shift+e                  ${WHITE} Exit i3
 
 ${GRAY}     ───────────────────────────────────────────────────────────────${RESET}
-${MAGENTA}     (Press a key to close)${RESET}
 "
 
 # Launch kitty and display help text with hidden cursor

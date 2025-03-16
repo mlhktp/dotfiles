@@ -1,0 +1,85 @@
+configuration {
+    modi: "run,drun,window";
+    lines: 6;
+    font: "Fira Code Nerd Font Regular 9";
+    show-icons: true;
+    terminal: "/home/melih/.local/kitty.app/bin/kitty";
+    drun-display-format: "{icon}{name}";
+    location: 4;
+    xoffset: -20;
+    yoffset: -40;
+    disable-history: true;
+    hide-scrollbar: true;
+}
+
+@import "~/.cache/wal/colors-rofi-dark"
+
+* {
+    width: 11%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+element-text, element-icon, mode-switcher {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+
+inputbar {
+   enabled: false;
+}
+
+message {
+   enabled: false;
+}
+
+prompt {
+    enabled: false;
+}
+
+sidebar {
+   enabled: false;
+}
+
+window {
+    location: southeast;
+    anchor: southeast;
+    height: 175px;
+    padding: 8px;
+    border-color: @background;
+    background-color: @background;
+}
+
+mainbox, listview, element, element normal normal, element normal urgent,
+element normal active, element alternate normal, element alternate urgent,
+element alternate active {
+    background-color: @background;
+}
+
+listview {
+    border: 0;
+    columns: 1;
+    scrollbar: false;
+}
+
+element {
+    border-radius: 10px;
+    padding: 4px;
+    text-color: @normal-foreground;
+}
+
+element-icon {
+    size: 10px;
+}
+
+element selected normal, element selected urgent, element selected active {
+    border-radius: 10px;
+    background-color: @selected-active-foreground;
+    text-color: @background;
+}
+
+scrollbar {
+    background-color: @background;
+}

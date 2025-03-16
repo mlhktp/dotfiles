@@ -16,7 +16,7 @@ set font "Fira Code 15"
 
 # clipboard configurations
 set selection-clipboard clipboard
-
+set window-title-basename true
 # mappings
 
 # unmap f
