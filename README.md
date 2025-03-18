@@ -40,6 +40,8 @@ stow .
 - [ ] *wal* change to darker backgrounds after specific times of the day.
 - [ ] Add a script for *crontab* jobs.
 - [ ] Fix the bluetooth script.
+- [x] Change the content on the screens.
+- [ ] Add focus option to one of the applications on the screen.
 
 
 ## Long-Term Goals:
