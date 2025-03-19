@@ -55,11 +55,9 @@ wal -s -i "${WALL_PATH}"
 [ -f ~/.current_wallpaper ] && rm ~/.current_wallpaper
 ln -sf "${WALL_PATH}" $HOME/.current_wallpaper
 
-betterlockscreen -u "${WALL_PATH}"
 
 # Reload other applications
 # bash ~/scripts/wal_to_alacritty.sh ~/.config/alacritty/alacritty.toml
-bash ~/scripts/reload_dunst.sh
 # bash ~/scripts/reload_conky.sh
 # bash ~/scripts/reload_obsidian.sh "$HOME/Notes"
 
@@ -73,6 +71,8 @@ i3-msg gaps bottom all set 9
 
 exec bash /home/melih/.config/polybar/start.sh > /dev/null 2>&1 &
 
+bash ~/scripts/reload_dunst.sh
 # Notify the user
+betterlockscreen -u "${WALL_PATH}"
 notify-send "Wallpaper" "Wallpaper set to ${WALL_NAME}"
 
