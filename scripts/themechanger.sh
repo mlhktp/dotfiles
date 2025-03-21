@@ -63,8 +63,8 @@ ln -sf "${WALL_PATH}" $HOME/.current_wallpaper
 
 POLYBAR_PROCESS="polybar"
 if pgrep -x "$POLYBAR_PROCESS" > /dev/null; then
+    polybar-msg cmd hide &
     killall -q "$POLYBAR_PROCESS"
-    sleep 0.4
 fi
 
 i3-msg gaps bottom all set 9
