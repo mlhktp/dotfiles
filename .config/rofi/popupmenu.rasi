@@ -10,6 +10,10 @@ configuration {
     yoffset: -40;
     disable-history: true;
     hide-scrollbar: true;
+    mouse-enabled: true;
+    me-select-entry: '';
+    me-accept-entry: "MousePrimary";
+    hover-select: true;
 }
 
 @import "~/.cache/wal/colors-rofi-dark"
